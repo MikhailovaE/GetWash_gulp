@@ -1,0 +1,9 @@
+@font-face {
+    font-family: GT Eesti Pro Regular;
+    src: url(../fonts/gteestiprodisplay_regular.otf);
+}
+
+@font-face {
+    font-family: GT Eesti Pro Light;
+  src: url(../fonts/gteestiprodisplay_light.otf);
+}

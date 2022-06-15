@@ -1,0 +1,43 @@
+@import "vars.scss";
+@import "mixins.scss";
+@import "vendor/normalize.scss";
+
+
+body {
+    font-family: "GT Eesti Pro Regular", sans-serif, Arial;
+    font-size: 14px;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+    
+    @include breakpoint($tablet-bp) {
+        &.show-sidebar {
+            overflow: hidden;
+        }
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a  {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/* Blocks */
+
+@import "blocks/modal.scss";
+@import "blocks/nav.scss";
+@import "blocks/in.scss";
+@import "fonts.scss";
+
+
