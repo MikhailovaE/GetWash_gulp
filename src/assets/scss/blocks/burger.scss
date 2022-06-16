@@ -1,11 +1,10 @@
 @import "../vars.scss";
 @import "../mixins.scss";
-@import "../vendor/normalize.scss";
 
 .burger {
   display: none;
 
-  &.nav-icon {
+  &.burger-icon {
     width: 24px;
     height: 24px;
     position: relative;
@@ -20,7 +19,7 @@
     cursor: pointer;
   }
 
-  &.nav-icon span {
+  &.burger-icon span {
     display: block;
     position: absolute;
     height: 2px;
@@ -39,7 +38,7 @@
     transition: 0.25s ease-in-out;
   }
 
-  &.nav-icon span:nth-child(1) {
+  &.burger-icon span:nth-child(1) {
     top: 6px;
     left: 3px;
     -webkit-transform-origin: left center;
@@ -48,7 +47,7 @@
     transform-origin: left center;
   }
 
-  &.nav-icon span:nth-child(2) {
+  &.burger-icon span:nth-child(2) {
     top: 12px;
     left: 3px;
     -webkit-transform-origin: left center;
@@ -57,7 +56,7 @@
     transform-origin: left center;
   }
 
-  &.nav-icon span:nth-child(3) {
+  &.burger-icon span:nth-child(3) {
     top: 18px;
     left: 3px;
     -webkit-transform-origin: left center;
@@ -66,7 +65,7 @@
     transform-origin: left center;
   }
 
-  &.nav-icon.open span:nth-child(1) {
+  &.burger-icon.open span:nth-child(1) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -75,12 +74,12 @@
     left: -3px;
   }
 
-  &.nav-icon.open span:nth-child(2) {
+  &.burger-icon.open span:nth-child(2) {
     width: 0%;
     opacity: 0;
   }
 
-  &.nav-icon.open span:nth-child(3) {
+  &.burger-icon.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);

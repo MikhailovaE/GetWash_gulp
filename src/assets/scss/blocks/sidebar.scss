@@ -1,6 +1,5 @@
 @import "../vars.scss";
 @import "../mixins.scss";
-@import "../vendor/normalize.scss";
 
 .sidebar {
   display: none;
@@ -31,12 +30,12 @@
       display: flex;
     }
 
-    .navigation {
+    .action {
       float: none;
       display: block;
     }
 
-    .nav {
+    .action__items {
       display: block;
       margin-right: 0;
       li {

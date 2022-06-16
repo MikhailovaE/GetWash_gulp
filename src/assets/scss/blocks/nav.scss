@@ -1,6 +1,5 @@
 @import "../vars.scss";
 @import "../mixins.scss";
-@import "../vendor/normalize.scss";
 
 header {
   padding: 20px 0;
@@ -36,7 +35,7 @@ header {
   }
 }
 
-.navigation {
+.action {
   float: right;
   display: flex;
   align-items: center;
@@ -47,7 +46,7 @@ header {
   }
 }
 
-.nav {
+.action__items {
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -77,7 +76,7 @@ header {
 }
 
 @include breakpoint($laptop-bp) {
-  .nav {
+  .action__items {
     margin-right: 75px;
     li {
       margin-left: 5px;

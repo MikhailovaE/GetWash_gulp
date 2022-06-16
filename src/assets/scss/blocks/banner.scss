@@ -1,7 +1,6 @@
 
 @import "../vars.scss";
 @import "../mixins.scss";
-@import "../vendor/normalize.scss";
 
 // banner
 .banner {
@@ -9,7 +8,7 @@
     position: relative;
     min-height: 500px;
   
-    .banner-header {
+    .banner__title {
       position: relative;
       margin: 24px 0px;
       font-size: 40px;
@@ -61,7 +60,7 @@
       margin-bottom: 56px;
     }
   
-    .banner-text {
+    .banner__header {
       max-width: 55%;
       align-self: center;
       z-index: 2;
@@ -153,7 +152,7 @@
     .banner {
       display: block;
   
-      .banner-text {
+      .banner__header {
         max-width: 100%;
       }
   
