@@ -1,51 +1,28 @@
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+@import "../vars.scss";
+@import "../mixins.scss";
+@import "../vendor/normalize.scss";
 
 .wrapper {
-  max-width: 1140px;
-  padding: 0 78px;
+  max-width: 1440px;
+  padding: 0 40px;
   margin: 0 auto;
+
+  @include breakpoint($tablet-bp) {
+    header {
+      padding-right: 0;
+    }
+  }
 }
 
 section {
   padding-top: 32px;
 }
 
-// btn
-.btn {
-  padding: 14px 25px;
-  border-radius: 6px;
-  border: solid 1px transparent;
-
-  &.btn-primary {
-    background: #446df6;
-    color: #fff;
-    padding: 18px 51px;
-    font-size: 18px;
-  }
-  &.btn-secondary {
-    border-color: #e9ecf5;
-    text-decoration: none;
-    color: #446df6;
-    font-size: 15px;
-  }
-  &.btn-tertiary {
-    border-color: #e9ecf5;
-    text-decoration: none;
-    color: #e9ecf5;
-    font-size: 15px;
-  }
-}
-
 // banner
 .banner {
   display: flex;
   position: relative;
-  height: 500px;
+  min-height: 500px;
 
   .banner-header {
     position: relative;
@@ -102,6 +79,7 @@ section {
   .banner-text {
     max-width: 55%;
     align-self: center;
+    z-index: 2;
   }
 
   .banner-img {
@@ -113,39 +91,115 @@ section {
     .banner-img::before {
       position: absolute;
       content: "";
-      background-image: url("../../images/iPhone12Pro.png");
-      top: -98px;
-      right: -57px;
+      background-image: url(../../assets/images/iPhone12Pro.png);
+      top: -74px;
+      right: 0;
       z-index: 1;
       background-position: center center;
       background-size: cover;
       width: 583px;
       height: 660px;
     }
+
     .banner-img::after {
       position: absolute;
       content: "";
-      background-image: url(../../images/banner_bg.svg);
+      background-image: url(../../assets/images/banner_bg.svg);
       background-repeat: no-repeat;
-      top: -98px;
-      right: -114px;
+      top: -74px;
+      right: 0;
       background-position: center center;
       background-size: cover;
       width: 780px;
       height: 660px;
     }
   }
+
   &.banner-02 {
+    flex-direction: row-reverse;
+
     .banner-img::before {
       position: absolute;
       content: "";
-      background-image: url(../../images/iPhone12.png);
-      top: -80px;
+      background-image: url(../../assets/images/iPhone12.png);
+      top: -6px;
       left: 0;
       background-position: center center;
       background-size: cover;
       width: 450px;
       height: 675px;
+    }
+  }
+}
+
+@include breakpoint($tablet-bp) {
+  .banner {
+    .banner-img {
+      width: 100%;
+    }
+
+    &.banner-01 {
+      .banner-img::before {
+        width: 388px;
+        height: 440px;
+        top: -20px;
+        left: 0;
+      }
+
+      .banner-img::after {
+        width: 520px;
+        height: 440px;
+        top: -20px;
+        left: 0;
+      }
+    }
+
+    &.banner-02 {
+      .banner-img::before {
+        width: 300px;
+        height: 450px;
+        top: 0px;
+      }
+    }
+  }
+}
+
+@include breakpoint($mobile-bp) {
+  .banner {
+    display: block;
+
+    .banner-text {
+      max-width: 100%;
+    }
+
+    .banner-img {
+      height: 338px;
+      max-width: 100%;
+    }
+
+    &.banner-01 {
+      .banner-img::before {
+        width: 397px;
+        height: 323px;
+        top: 0px;
+        background-image: url(../../assets/images/iPhone12mockup.png);
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      .banner-img::after {
+        display: none;
+      }
+    }
+
+    &.banner-02 {
+      .banner-img::before {
+        width: 300px;
+        height: 338px;
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
     }
   }
 }
@@ -191,7 +245,7 @@ section {
 
 .partners {
   text-align: center;
-  margin: 50px auto 50px;
+  margin-bottom: 32px;
 }
 
 .partners-description {
@@ -248,13 +302,21 @@ footer {
   background-color: #141b41;
   padding: 20px 0;
   .logo a::before {
-    background-image: url(../../images/GetWash_footer.svg);
+    background-image: url(../../assets/images/GetWash_footer.svg);
   }
 }
 
-header {
-  padding: 20px 0;
-  .logo a::before {
-    background-image: url(../../images/GetWash.svg);
+.page__mask {
+  @include breakpoint($tablet-bp) {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba($black, 0.9);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
   }
 }

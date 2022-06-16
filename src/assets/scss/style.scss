@@ -25,7 +25,7 @@ body {
 }
 
 a  {
-    text-decoration: none;
+    text-decoration: none;s
 
     &:hover {
         text-decoration: underline;
@@ -38,6 +38,9 @@ a  {
 @import "blocks/modal.scss";
 @import "blocks/nav.scss";
 @import "blocks/in.scss";
+@import "blocks/btn.scss";
+@import "blocks/burger.scss";
+@import "blocks/sidebar.scss";
 @import "fonts.scss";
 
 

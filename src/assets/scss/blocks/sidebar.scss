@@ -1,0 +1,54 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+@import "../vendor/normalize.scss";
+
+.sidebar {
+  display: none;
+  
+  @include breakpoint($tablet-bp) {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+
+    background-color: $white;
+    display: none;
+    flex-direction: column;
+    height: calc(100vh - 4rem);
+    padding-bottom: 1.5rem;
+    overflow: auto;
+
+    top: 4rem;
+
+    transform: translateX(-100%);
+    transition: transform 0.2s linear;
+    z-index: 100;
+
+    border-top: 1px solid #e9ecf5;
+
+    .show-sidebar & {
+      transform: translateX(0);
+      display: flex;
+    }
+
+    .navigation {
+      float: none;
+      display: block;
+    }
+
+    .nav {
+      display: block;
+      margin-right: 0;
+      li {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        border-bottom: 1px solid #e9ecf5;
+
+        a {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

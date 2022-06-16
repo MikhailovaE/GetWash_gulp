@@ -1,3 +1,17 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+@import "../vendor/normalize.scss";
+
+header {
+  padding: 20px 0;
+
+  @include breakpoint($tablet-bp) {
+    padding: 20px;
+    border-bottom: 1px solid #E9ECF5;
+    box-sizing: border-box;
+  }
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -7,6 +21,8 @@
 .logo {
   position: relative;
   float: left;
+  width: 120px;
+  margin-right: 20px;
 
   a::before {
     content: "";
@@ -16,6 +32,7 @@
     width: 120px;
     height: 22.18px;
     top: -12px;
+    background-image: url(../../assets/images/GetWash.svg);
   }
 }
 
@@ -24,6 +41,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include breakpoint($tablet-bp) {
+    display: none;
+  }
 }
 
 .nav {
@@ -45,9 +66,22 @@
     }
 
     a {
-      text-decoration: none;
       color: #72727e;
       font-size: 17px;
+    }
+  }
+
+  @include breakpoint($tablet-bp) {
+    display: none;
+  }
+}
+
+@include breakpoint($laptop-bp) {
+  .nav {
+    margin-right: 75px;
+    li {
+      margin-left: 5px;
+      margin-right: 23px;
     }
   }
 }

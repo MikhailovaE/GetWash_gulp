@@ -1,0 +1,77 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+@import "../vendor/normalize.scss";
+
+// btn
+.btn {
+  padding: 14px 25px;
+  border-radius: 6px;
+  border: solid 1px transparent;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &.btn-primary {
+    background: #446df6;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:focus {
+      outline: 2px solid #141b41;
+    }
+
+    &:active {
+        filter: brightness(85%);
+    }
+  }
+
+  &.btn-secondary {
+    border-color: #e9ecf5;
+    color: #446df6;
+
+    &:hover {
+      color: #446df6;
+      opacity: 0.8;
+      background-color: #e9ecf5;
+    }
+
+    &:focus {
+      outline: 2px solid #141b41;
+    }
+
+    &:active {
+      background-color: #e9ecf5;
+    }
+  }
+
+  &.btn-tertiary {
+    border-color: #e9ecf5;
+    color: #e9ecf5;
+
+    &:hover {
+      color: #446df6;
+      opacity: 0.8;
+      background-color: #e9ecf5;
+    }
+
+    &:focus {
+      outline: 2px solid #141b41;
+    }
+
+    &:active {
+      background-color: #e9ecf5;
+    }
+  }
+
+  &.btn-big-size {
+    padding: 18px 51px;
+    font-size: 18px;
+  }
+
+  @include breakpoint($tablet-bp) {
+    padding: 8px 14px;
+  }
+}
