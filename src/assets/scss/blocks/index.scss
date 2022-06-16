@@ -1,0 +1,27 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+@import "../vendor/normalize.scss";
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @include breakpoint($tablet-bp) {
+    header {
+      padding-right: 0;
+    }
+  }
+}
+
+section {
+  padding-top: 32px;
+}
+
+footer {
+  background-color: #141b41;
+  padding: 20px 0;
+  .logo a::before {
+    background-image: url(../../assets/images/GetWash_footer.svg);
+  }
+}

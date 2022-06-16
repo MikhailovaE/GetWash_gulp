@@ -141,10 +141,39 @@
     </footer>
 
     <div class="modal" id="modal">
-        <div class="modal__content  modal__content">
+        <div class="modal__content ">
+            <button class="modal__close" type="button">
+                <img src="../assets/images/icons/x.svg" alt="Закрыть">
+            </button>
+            <h2 class="modal__header">Стань нашим партнером и начни зарабатывать: </h2>
+            <form class="modal__form">
+                <div class="text-field">
+                    <img class="text-field__icon" src="../assets/images/icons/Edit.svg" alt="edit" />
+                    <input class="text-field__input" type="text" name="name" placeholder="Ведите имя">
+                </div>
+                <div class="text-field">
+                    <img class="text-field__icon" src="../assets/images/icons/Message.svg" alt="message" />
+                    <input class="text-field__input" type="email" name="login" placeholder="E-mail">
+                </div>
+                <div class="text-field">
+                    <img class="text-field__icon" src="../assets/images/icons/Call.svg" alt="call" />
+                    <input class="text-field__input" type="text" name="number" placeholder="Номер телефона">
+                </div>
+                <div class="text-field">
+                    <input type="checkbox" id="news">
+                    <label class="text-field__label" for="news">Я хочу получать новости на почтовый адрес</label>
+                </div>
+                <div class="text-field">
+                    <input type="checkbox" id="agree">
+                    <label class="text-field__label" for="agree">Я согласен учавствовать в сборе данных</label>
+                </div>
+            </form>
+            <div class="modal__footer">
+                <button class="btn btn-primary">Получить доступ</button>
+                <p>Нажимая кнопку Вы принимаете<br /> <a href="#">политику конфиденциальности</a></p>
+            </div>
         </div>
-    </div>
-    <!-- Sidebar -->
+    </div>    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <nav class="navigation">
             <ul class="nav">

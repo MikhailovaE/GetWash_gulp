@@ -1,0 +1,37 @@
+
+@import "../vars.scss";
+@import "../mixins.scss";
+@import "../vendor/normalize.scss";
+
+// items
+.items {
+    list-style-type: none;
+    padding: 0;
+  
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+  
+      .item-image {
+        padding: 12px;
+        background-color: #f7f8fd;
+        border-radius: 6px;
+        width: 60px;
+        height: 60px;
+        margin-right: 25px;
+      }
+  
+      .item-header {
+        font-size: 24px;
+        margin: 0 0 8px;
+      }
+  
+      .item-description {
+        font-size: 18px;
+        font-family: "GT Eesti Pro Light", sans-serif, Arial;
+        color: #72727e;
+        letter-spacing: -0.6px;
+      }
+    }
+  }

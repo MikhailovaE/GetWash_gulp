@@ -1,0 +1,191 @@
+
+@import "../vars.scss";
+@import "../mixins.scss";
+@import "../vendor/normalize.scss";
+
+// banner
+.banner {
+    display: flex;
+    position: relative;
+    min-height: 500px;
+  
+    .banner-header {
+      position: relative;
+      margin: 24px 0px;
+      font-size: 40px;
+      letter-spacing: -1px;
+      line-height: 1.2;
+  
+      .arrow {
+        display: inline-block;
+        position: relative;
+        width: 91px;
+        height: 3px;
+        background-color: #446df6;
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
+  
+      .arrow:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 13px;
+        height: 3px;
+        background-color: #446df6;
+        transform: rotate(-45deg);
+        transform-origin: 100% 0%;
+      }
+  
+      .arrow:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 3px;
+        background-color: #446df6;
+        transform: rotate(45deg);
+        transform-origin: 100% 0%;
+      }
+    }
+  
+    .banner-description {
+      font-family: "GT Eesti Pro Light", sans-serif, Arial;
+      color: #72727e;
+      font-size: 24px;
+      letter-spacing: -0.6px;
+      margin-bottom: 56px;
+    }
+  
+    .banner-text {
+      max-width: 55%;
+      align-self: center;
+      z-index: 2;
+    }
+  
+    .banner-img {
+      position: relative;
+      width: 50%;
+    }
+  
+    &.banner-01 {
+      .banner-img::before {
+        position: absolute;
+        content: "";
+        background-image: url(../../assets/images/iPhone12Pro.png);
+        top: -74px;
+        right: 0;
+        z-index: 1;
+        background-position: center center;
+        background-size: cover;
+        width: 583px;
+        height: 660px;
+      }
+  
+      .banner-img::after {
+        position: absolute;
+        content: "";
+        background-image: url(../../assets/images/banner_bg.svg);
+        background-repeat: no-repeat;
+        top: -74px;
+        right: 0;
+        background-position: center center;
+        background-size: cover;
+        width: 780px;
+        height: 660px;
+      }
+    }
+  
+    &.banner-02 {
+      flex-direction: row-reverse;
+  
+      .banner-img::before {
+        position: absolute;
+        content: "";
+        background-image: url(../../assets/images/iPhone12.png);
+        top: -6px;
+        left: 0;
+        background-position: center center;
+        background-size: cover;
+        width: 450px;
+        height: 675px;
+      }
+    }
+  }
+  
+  @include breakpoint($tablet-bp) {
+    .banner {
+      .banner-img {
+        width: 100%;
+      }
+  
+      &.banner-01 {
+        .banner-img::before {
+          width: 388px;
+          height: 440px;
+          top: -20px;
+          left: 0;
+        }
+  
+        .banner-img::after {
+          width: 520px;
+          height: 440px;
+          top: -20px;
+          left: 0;
+        }
+      }
+  
+      &.banner-02 {
+        .banner-img::before {
+          width: 300px;
+          height: 450px;
+          top: 0px;
+        }
+      }
+    }
+  }
+  
+  @include breakpoint($mobile-bp) {
+    .banner {
+      display: block;
+  
+      .banner-text {
+        max-width: 100%;
+      }
+  
+      .banner-img {
+        height: 338px;
+        max-width: 100%;
+      }
+  
+      &.banner-01 {
+        .banner-img::before {
+          width: 397px;
+          height: 323px;
+          top: 0px;
+          background-image: url(../../assets/images/iPhone12mockup.png);
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+  
+        .banner-img::after {
+          display: none;
+        }
+      }
+  
+      &.banner-02 {
+        .banner-img::before {
+          width: 300px;
+          height: 338px;
+          top: 0px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+  }
+  
